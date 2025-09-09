@@ -1,7 +1,7 @@
 name: Greetings
 
 # issues like opened, edited, deleted
-# https://docs.github.com/de/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues
+# seite: https://docs.github.com/de/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues
 on: [pull_request_target, issues]
 
 jobs:
@@ -11,6 +11,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
+      # repo url: https://github.com/actions/first-interaction
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
